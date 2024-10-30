@@ -34,7 +34,6 @@ Certifique-se de que esses serviços estejam em execução localmente antes de i
 Com os repositórios de API e Design System configurados e executando, agora você pode clonar e iniciar este projeto para explorar os conceitos de React Query:
 
 ```bash
-git clone <URL_DO_REPOSITORIO_ATUAL>
-cd <NOME_DO_REPOSITORIO>
+git clone <https://github.com/Lucaswillians/react-query-concepts>
 npm install
 npm start
