@@ -1,39 +1,40 @@
-![Integrando seu projeto React com APIs](thumbnail.png)
+# Conceitos de React Query 📚
 
-# AluraBooks
+Este repositório explora os conceitos e práticas fundamentais do **React Query**, uma biblioteca que facilita o gerenciamento de estado de dados assíncronos no React, tornando mais simples a busca, o cache e a sincronização de dados.
 
-O AluraBooks é uma loja virtual que vende livros da Casa do Código. 
-É um MVP que tá só começando e ainda tem muitas funcionalidades novas para serem desenvolvidas.
+## Pré-requisitos
 
-<img src="screencapture.png" alt="Imagem do AluraBooks" width="50%">
+Para rodar este projeto corretamente, é necessário clonar e executar os seguintes repositórios:
 
+1. [API Alurabooks](https://github.com/alura-cursos/api-alurabooks): API que fornece os dados necessários para o projeto.
+2. [Design System Alurabooks](https://github.com/alura-cursos/ds-alurabooks): Design System com os componentes de UI para o projeto.
 
-## 🔨 Funcionalidades do projeto
+### Clonando e Executando os Repositórios
 
-O AluraBooks começa com a página inicial já pronta, que você pode baixar e utilizar ou então... criar a sua versão baseada <a href="https://www.figma.com/file/POpX503Kobu83iGdiaICvk/React%3A-Alura-Books?node-id=119%3A3145" target="_blank">no figma</a>.
-No decorrer da formação nós vamos implementar toda a camada de comunicação com a API, inclusive a autenticação.
+1. **Clonando o Repositório da API**:
+    ```bash
+    git clone https://github.com/alura-cursos/api-alurabooks
+    cd api-alurabooks
+    npm install
+    npm start
+    ```
 
-## ✔️ Técnicas e tecnologias utilizadas
+2. **Clonando o Repositório do Design System**:
+    ```bash
+    git clone https://github.com/alura-cursos/ds-alurabooks
+    cd ds-alurabooks
+    npm install
+    npm start
+    ```
 
-Se liga nessa lista de tudo que usaremos nessa formação:
+Certifique-se de que esses serviços estejam em execução localmente antes de iniciar o projeto principal para garantir que todas as dependências estejam atendidas.
 
-- `React`
-- `React Hooks`
-- `TypeScript`
-- `axios`
-- `Session Storage`
-- `TSDX`
-- `NPM` (no primeiro curso nós criamos uma biblioteca e a publicamos no NPM)
-- `Github Actions`
+## Executando o Projeto Principal
 
-E muito mais!
+Com os repositórios de API e Design System configurados e executando, agora você pode clonar e iniciar este projeto para explorar os conceitos de React Query:
 
-## 🛠️ Abrir e rodar o projeto
-
-Para abrir e rodar o projeto, execute `npm i` para instalar as dependências e `npm start` para inicar o projeto.
-
-Depois, acesse <a href="http://localhost:3000/">http://localhost:3000/</a> no seu navegador.
-
-## 📚 Mais informações do curso
-
-O AluraBooks é o projeto utilizado durante toda a formação, e você pode navegar entre as branchs para encontrar o momento específico que está buscando.
+```bash
+git clone <URL_DO_REPOSITORIO_ATUAL>
+cd <NOME_DO_REPOSITORIO>
+npm install
+npm start
