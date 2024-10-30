@@ -4,8 +4,19 @@ import ModalCadastroUsuario from "../ModalCadastroUsuario"
 import logo from './assets/logo.png'
 import usuario from './assets/usuario.svg'
 import './BarraNavegacao.css'
+import { useEffect, useState } from "react"
+import { ICategorias } from "../../interfaces/ICategorias"
+import http from "../../http"
 
 const BarraNavegacao = () => {
+    const [categorias, setCategorias] = useState<ICategorias[]>([])
+
+    useEffect(() => {
+        http.get<ICategorias[]>('categorias').then(response => {
+            setCategorias(response.data)
+        })
+    },[])
+
     return (<nav className="ab-navbar">
         <h1 className="logo">
             <Link to="/">
@@ -16,31 +27,15 @@ const BarraNavegacao = () => {
             <li>
                 <a href="#!">Categorias</a>
                 <ul className="submenu">
-                    <li>
-                        <Link to="/">
-                            Frontend
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/">
-                            Programação
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/">
-                            Infraestrutura
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/">
-                            Business
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/">
-                            Design e UX
-                        </Link>
-                    </li>
+                   {
+                    categorias.map(categoria => (
+                        <li key={categoria.id}>
+                            <Link to={`/categorias/${categoria.slug}`}>
+                                {categoria.nome}
+                            </Link>
+                        </li>
+                    ) )
+                   }
                 </ul>
             </li>
         </ul>
